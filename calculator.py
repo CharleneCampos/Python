@@ -32,10 +32,10 @@ def main():
         
         try:
             k = eval(k)
-        except ZeroDivisionError:
+        except ZeroDivisionError:  #catches the error when users try to divide a number by zero
             print ("Can't divide by 0")
             exit()
-        except NameError:
+        except NameError: #catches the error when the user enter a invalid input
             print ("Invalid input")
             exit()
         
@@ -52,7 +52,7 @@ def main():
     k = k.replace('?', '')
     k = k.replace('%', '/100')
 
-    print ("\n" + str(calc(k)))
-    
+print ("\n" + str(calc(k)))
+
 if __name__ == "__main__":
     main()
